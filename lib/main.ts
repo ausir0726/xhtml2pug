@@ -16,7 +16,6 @@ const setupDefaultOptions = ({
   symbol: "  ",
   parser: "html",
   classesAtEnd: false,
-  keepClassAttr: false,
   ...options,
 });
 

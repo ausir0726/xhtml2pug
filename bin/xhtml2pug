@@ -56,12 +56,6 @@ async function init() {
       desc: "Place all classes after attributes",
       type: "boolean",
     })
-    .option("keepClassAttr", {
-      alias: "k",
-      default: false,
-      desc: "Keep all classes with html attributes",
-      type: "boolean",
-    })
     .option("parser", {
       alias: "p",
       default: "html",
@@ -84,7 +78,6 @@ async function init() {
     attrComma,
     bodyLess,
     classesAtEnd,
-    keepClassAttr,
     doubleQuotes,
     encode,
     inlineCSS,
@@ -101,7 +94,6 @@ async function init() {
     symbol: tabs ? "\t" : " ".repeat(spaces),
     parser,
     classesAtEnd,
-    keepClassAttr,
   };
 
   try {
