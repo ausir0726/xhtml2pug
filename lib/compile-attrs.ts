@@ -17,14 +17,12 @@ export const formatAttrsForTag = (attrs: Attr[], options: CompileOptions) =>
           id: value,
         };
       }
-
-      if (!options.keepClassAttr && key === "class" && value && allowValue(value) && !options.inlineCSS) {
+      if (key === "class" && value && allowValue(value) && !options.inlineCSS) {
         return {
           ...acc,
           className: value,
         };
       }
-
       return {
         ...acc,
         attrs: acc.attrs.concat({ key, value }),
